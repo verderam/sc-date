@@ -1,7 +1,7 @@
 const { input } = require("@saltcorn/markup/tags");
 
-const degrees = {
-  name: "Degrees",
+const angle = {
+  name: "Angle",
   sql_name: "double precision",
   fieldviews: {
     show: { isEdit: false, run: (s) => text(s) },
@@ -31,4 +31,4 @@ const degrees = {
   },
 };
 
-module.exports = { sc_plugin_api_version: 1, types: [degrees] };
+module.exports = { sc_plugin_api_version: 1, types: [angle] };

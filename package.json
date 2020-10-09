@@ -1,5 +1,5 @@
 {
-  "name": "@saltcorn/degrees-type",
+  "name": "@saltcorn/angles-type",
   "version": "0.1.0",
   "description": "Angular degrees data type",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "author": "Tom Nielsen",
   "license": "MIT",
-  "repository": "github:saltcorn/degrees-type",
+  "repository": "github:saltcorn/angles-type",
   "publishConfig": {
     "access": "public"
   }
