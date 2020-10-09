@@ -1,0 +1,16 @@
+{
+  "name": "@saltcorn/degrees-type",
+  "version": "0.1.0",
+  "description": "Angular degrees data type",
+  "main": "index.js",
+  "dependencies": {
+    "@saltcorn/markup": "^0.2.1",
+    "@saltcorn/data": "^0.2.1"
+  },
+  "author": "Tom Nielsen",
+  "license": "MIT",
+  "repository": "github:saltcorn/degrees-type",
+  "publishConfig": {
+    "access": "public"
+  }
+}
