@@ -1,21 +1,14 @@
-const { input } = require("@saltcorn/markup/tags");
-
 const angle = {
   name: "Angle",
   sql_name: "double precision",
   fieldviews: {
-    show: { isEdit: false, run: (s) => text(s) },
+    show: { isEdit: false, run: (s) => `${s}&deg;` },
     edit: {
       isEdit: true,
       run: (nm, v, attrs, cls) =>
-        input({
-          type: "number",
-          class: ["form-control", cls],
-          name: text_attr(nm),
-          disabled: attrs.disabled,
-          id: `input${text_attr(nm)}`,
-          ...((v || v === 0) && { value: text_attr(v) }),
-        }),
+        `<input type="number" class="form-control ${cls}" name="${nm}" id="input${nm}" ${
+          v || v === 0 ? `value="${v}"` : ""
+        }>&deg;`,
     },
   },
   read: (v) => {
