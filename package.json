@@ -1,5 +1,5 @@
 {
-  "name": "@saltcorn/angles-type",
+  "name": "saltcorn-angles-type",
   "version": "0.1.0",
   "description": "Angular degrees data type",
   "main": "index.js",
