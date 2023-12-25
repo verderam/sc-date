@@ -1,27 +1,19 @@
-const angle = {
-  name: "Angle",
-  sql_name: "double precision",
+const nativedate = {
+  name: "Native date",
+  sql_name: "date",
   fieldviews: {
-    show: { isEdit: false, run: (s) => `${s}&deg;` },
+    show: { isEdit: false, run: (s) => `${s}` },
     edit: {
       isEdit: true,
       run: (nm, v, attrs, cls) =>
-        `<input type="number" class="form-control ${cls}" name="${nm}" id="input${nm}" ${
+        `<input type="date" class="form-control ${cls}" name="${nm}" id="input${nm}" ${
           v || v === 0 ? `value="${v}"` : ""
-        }>&deg;`,
+        }>`,
     },
   },
   read: (v) => {
-    switch (typeof v) {
-      case "number":
-        return v;
-      case "string":
-        const parsed = parseFloat(v);
-        return isNaN(parsed) ? undefined : parsed;
-      default:
-        return undefined;
-    }
+    return v; 
   },
 };
 
-module.exports = { sc_plugin_api_version: 1, types: [angle] };
+module.exports = { sc_plugin_api_version: 1, types: [nativedate] };
