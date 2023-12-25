@@ -9,14 +9,17 @@ const {
   style,
 } = require("@saltcorn/markup/tags");
 
-const nativeDate = (dt) => ({
+const nativeDate = ({
   type: "Date",
   isEdit: true,
   run: (nm, v, attrs, cls, required, field) => {
     return (
       input({
         type: "date",
+        class: ["form-control", "dt", cls],
         name: text_attr(nm),
+        placeholder: attrs.placeholder,
+        disabled: attrs.disabled,
         id: `input${text_attr(nm)}`,
         value: v,
       })
