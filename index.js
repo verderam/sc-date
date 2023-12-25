@@ -37,5 +37,6 @@ const nativeDate = {
 module.exports = {
   sc_plugin_api_version: 1,
   fieldviews: { nativeDate },
-  plugin_name: "sc-date"
+  plugin_name: "sc-date",
+
 };
