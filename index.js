@@ -18,7 +18,7 @@ const nativeDate = {
         name: text_attr(nm),
         placeholder: attrs.placeholder,
         disabled: attrs.disabled,
-        id: `input${text_attr(nm)}${rndid}`,
+        id: `input${text_attr(nm)}`,
         ...(typeof v !== "undefined" &&
           v !== null && {
             value: text_attr(
