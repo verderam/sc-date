@@ -21,7 +21,7 @@ const nativeDate = ({
         placeholder: attrs.placeholder,
         disabled: attrs.disabled,
         id: `input${text_attr(nm)}`,
-        value: v && new Date(Date.parse(v)),
+        value: v && new Date(Date.parse(v)).toISOString().substr(0,10),
       })
     );
   },
